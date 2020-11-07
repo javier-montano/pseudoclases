@@ -1,0 +1,362 @@
+*{
+	box-sizing: border-box;
+}
+body{
+
+	margin:auto;
+}
+header{
+	text-align:center;
+	margin: 50px;
+}
+
+  /** HOOVER CSS*/
+
+.caja1{
+	background-color: lightgreen;
+	height: 150px;
+	text-align: center
+}
+.sobre{
+	background-color: red;
+}
+.sobre:hover{
+	background-color: white;
+
+}
+
+   /** ACTIVE */
+
+.caja2{
+	background-color: lightblue;
+	height: 150px;
+}
+ a:active { color: blue; } 
+
+
+     /** DEFAULT*/
+
+
+.caja3{
+	background-color: lightyellow;
+    height: 150px;
+}
+
+  /** EMPTY*/
+
+
+.cajaunouno{
+	background-color: lightyellow;
+	height:150px;
+}
+.box {
+  background: pink;
+  height: 30px;
+  width: 90px;
+}
+
+  /** EMPTY */
+
+.box:empty {
+  background: lime;
+}
+
+   /** ENABLED*/
+
+.cajaunodos{
+    background-color: lightgreen;
+	height: 150px;	
+}
+input:enabled {
+  color: #2b2;
+}
+
+input:disabled {
+  color: #aaa;
+}
+
+
+
+    /** FIRST */
+
+.cajaunotres{
+	background-color: lightblue;
+	height: 150px;
+}
+
+@page :first {
+  margin-left: 50%;
+  margin-top: 50%;
+}
+
+p {
+  page-break-after: always;
+}
+
+
+  /** FIRST CHILD */
+
+.cajadosuno{
+	background-color: lightblue;
+	height: 150px;
+}
+p:first-child {
+  color: lime;
+  background-color: black;
+  padding: 5px;
+}
+
+
+  /** FIRST OF TYPE */
+
+.cajadosdos{
+   background-color: lightyellow;
+   height:150px;	
+}
+p:first-of-type {
+  color: red;
+  font-style: italic;
+}
+
+
+  /** FOCUS*/
+
+.cajadostres{
+   background-color: lightgreen;
+   height:150px;
+}
+
+ .red-input:focus {
+  background: yellow;
+  color: red;
+}
+
+.blue-input:focus {
+  background: yellow;
+  color: blue;
+}
+
+
+   /** indeterminate*/
+
+.cajatresuno{
+   background-color: lightgreen;
+   height:150px;	
+}
+input:indeterminate + label {
+  background: lime;
+}
+
+
+  /** in range */
+
+.cajatresdos{
+   background-color: lightblue;
+   height:150px;	
+}
+li {
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+input {
+  border: 1px solid black;
+}
+
+input:in-range {
+  background-color: rgba(0, 255, 0, 0.25);
+}
+
+input:out-of-range {
+  background-color: rgba(255, 0, 0, 0.25);
+  border: 2px solid red;
+}
+
+input:in-range + label::after {
+  content: 'bien.';
+}
+
+input:out-of-range + label::after {
+  content: 'fuera de rango!';
+}
+
+
+  /** invalid */
+
+.cajatrestres{
+	background-color: lightyellow;
+    height:150px;
+}
+input:invalid {
+  background-color: #ffdddd;
+}
+
+form:invalid {
+  border: 5px solid #ffdddd;
+}
+
+input:valid {
+  background-color: #ddffdd;
+}
+
+form:valid {
+  border: 5px solid #ddffdd;
+}
+  
+input:required {
+  border-color: #800000;
+  border-width: 3px;
+}
+
+input:required:invalid {
+  border-color: #C00000;
+}
+
+ /** lang*/
+
+.cajacuatrouno{
+	background-color: lightyellow;
+    height:150px;
+}
+:lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
+:lang(fr) > q { quotes: '« ' ' »'; }
+:lang(de) > q { quotes: '»' '«' '\2039' '\203A'; }
+
+
+.cajacuatrodos{
+	background-color: lightgreen;
+    height:150px; 
+}
+a:link {
+  background-color: gold;
+  color: green;
+}
+
+ /** not */
+
+.cajacuatrotres{
+    background-color: lightblue;
+    height:150px; 	
+}
+.fancy {
+  text-shadow: 2px 2px 3px gold;
+}
+
+/* elementos <p> que no están en la clase `.fancy` */
+p:not(.fancy) {
+  color: green;
+}
+
+/* Elementos que no son elementos <p> */ 
+body :not(p) {
+  text-decoration: underline;
+}
+
+/* Elementos que no son elementos <div> o <span> */
+body :not(div):not(span) {
+  font-weight: bold;
+}
+
+/* Elementos que no son `.crazy` o `.fancy` */
+/* Tenga en cuenta que esta sintaxis aún no está bien soportada. */
+body :not(.crazy, .fancy) {
+  font-family: sans-serif;
+}
+
+     /** nth child */
+
+.cajacincouno{
+	background-color: lightblue;
+    height:150px; 
+}
+main :only-child {
+  color: red;
+}
+
+
+     /** out of range*/
+
+.cajacincotres{
+	background-color: lightgreen;
+    height:150px;
+}
+li {
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+input {
+  border: 1px solid black;
+}
+
+input:in-range {
+  background-color: rgba(0, 255, 0, 0.25);
+}
+
+input:out-of-range {
+  background-color: rgba(255, 0, 0, 0.25);
+  border: 2px solid red;
+}
+
+input:in-range + label::after {
+  content: 'bien.';
+}
+
+input:out-of-range + label::after {
+  content: '¡fuera de rango!';
+}
+
+
+/** read only*/
+
+
+.cajaseisuno{
+	background-color: lightgreen;
+    height:150px;
+}
+
+	input { min-width: 25em; }
+input:-moz-read-only { background: cyan; }
+input:read-only { background: cyan; }
+
+p:-moz-read-only { background: lightgray; }
+p:read-only { background: lightgray; }
+p[contenteditable="true"] { color: blue; }
+}
+
+
+/** read write*/
+
+.cajaseisdos{
+	background-color: lightgreen;
+    height:150px;
+} 
+input { min-width: 25em; }
+input:-moz-read-write { background: cyan; }
+input:read-write { background: cyan; }
+
+p:-moz-read-write { background: lightgray; }
+p:read-write { background: lightgray; }
+p[contenteditable="true"] { color: blue; }
+
+.cajasiete{
+	height: 100px;
+	margin-top: 20px;
+}
+
+
+
+     /** PSEUDOELEMENTOS*/
+
+.exciting-text::after {
+  content: " <- EXCITING!"; 
+  color: green;
+}
+
+.boring-text::after {
+  content: " <- BORING";
+  color: red;
+}
+     
+
+
